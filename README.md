@@ -8,17 +8,12 @@
 ## 获取
 ```shell
 go get github.com/goindow/epicker
-
 go get -u github.com/goindow/epicker    // 更新
 ```
 
-## 测试
+## 测试 & 文档
 ```shell
 go test
-```
-
-## 文档
-```shell
 godoc -http=:6060
 ```
 
