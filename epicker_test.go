@@ -171,6 +171,22 @@ func Test_Panicf_Nil(t *testing.T) {
 	Panicf(nil, CUSTOM_ERR_FORMAT, CUSTOM_ERR)
 }
 
+func Benchmark_Print(b *testing.B) {
+	buf.Reset()
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		Print(err)
+	}
+}
+
+func Benchmark_Printf(b *testing.B) {
+	buf.Reset()
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		Printf(err, CUSTOM_ERR_FORMAT, CUSTOM_ERR)
+	}
+}
+
 func fail(t *testing.T, s string) {
 	echo(t, s, 1)
 }
