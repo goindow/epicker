@@ -5,10 +5,21 @@
 - 当 error 为 nil，不做任何处理；为 error，相应函数处理错误
 - picker 是基于 log 的封，底层调用 log.Logger.Output 会在最后追加换行
 
-## 安装
+## 获取
 ```shell
 go get github.com/goindow/epicker
-go get -u github.com/goindow/epicker
+
+go get -u github.com/goindow/epicker    // 更新
+```
+
+## 测试
+```shell
+go test
+```
+
+## 文档
+```shell
+godoc -http=:6060
 ```
 
 ## 索引
@@ -59,7 +70,7 @@ epicker.Fatal(e)
 ```
 
 ### Fatalf
-- 如果 e 不是 nil，则使用自定义格式打印错误(会追加 e 的内容)，并退出程序，
+- 如果 e 不是 nil，则使用自定义格式打印错误(会追加 e 的内容)，并退出程序
 - 本质是 Print() 后，接着执行 os.exit(1)
 ```go
 // e := nil
@@ -99,7 +110,7 @@ var buf bytes.buffer
 epicker.SetLogger(&buf, "prefix", 0)	// 将错误信息输出到 buf 中（而不是默认的 os.Stderr，一般是显示设备，如显示器）
 ```
 
-### 一个完整的例子
+## 一个完整的例子
 ```go
 package epicker_test
 
@@ -126,6 +137,6 @@ func ExamplePrint() {
 }
 ```
 
-### 更多例子可以查看
+## 更多信息
 - [epicker_test.go](https://github.com/goindow/epicker/blob/master/epicker_test.go)
 - [example_test.go](https://github.com/goindow/epicker/blob/master/example_test.go)
