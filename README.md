@@ -7,7 +7,11 @@
 
 ## 测试 & 文档
 ```shell
+// 单元测试
 go test
+// 基准测试
+go test -test.bench=".*"
+// 本地文档
 godoc -http=:6060
 ```
 
