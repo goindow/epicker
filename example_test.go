@@ -21,3 +21,11 @@ func ExamplePrint() {
 	// Output:
 	// open /usr/local/var/go/src/github.com/goindow/epicker/non_exists.file: no such file or directory
 }
+
+func ExamplePrintf() {
+	_, err := os.Open(nonExistsFile)
+	epicker.Printf(err, "format %s", "custom erorr info")
+	// Todo: something
+	// Output:
+	// format custom error info (open /usr/local/var/go/src/github.com/goindow/epicker/non_exists.file: no such file or directory)
+}
