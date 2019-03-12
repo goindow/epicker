@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	FLAG = log.Ltime | log.Lshortfile // 默认的日志输出标记，时间及文件名
+	FLAG = log.Ltime | log.Lshortfile // 默认的日志输出标记，时间及文件名和行号
 )
 
 // Picker 是对 log.Logger 的一层包装
