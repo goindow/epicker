@@ -1,8 +1,8 @@
 package epicker_test
 
 import (
-	"github.com/goindow/epicker"
 	"os"
+	"github.com/goindow/epicker"
 )
 
 var (
