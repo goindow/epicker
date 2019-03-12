@@ -8,7 +8,7 @@
 ## 测试 & 文档
 ```shell
 // 单元测试
-go test
+go test [-v]
 // 基准测试
 go test -test.bench=".*"
 // 本地文档
