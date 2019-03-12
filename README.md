@@ -5,12 +5,6 @@
 - 当 error 为 nil，不做任何处理；为 error，相应函数处理错误
 - picker 是基于 log 的封，底层调用 log.Logger.Output 会在最后追加换行
 
-## 获取
-```shell
-go get github.com/goindow/epicker
-go get -u github.com/goindow/epicker    // 更新
-```
-
 ## 测试 & 文档
 ```shell
 go test
