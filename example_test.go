@@ -2,8 +2,7 @@ package epicker_test
 
 import (
 	"os"
-	"fmt"
-	"epicker"
+	"github.com/goindow/epicker"
 )
 
 var (
@@ -12,13 +11,13 @@ var (
 )
 
 func setLogger() {
-	
+	epicker.SetLogger(os.Stderr, "", 0)	
 }
 
 func ExamplePrint() {
 	_, err := os.Open(nonExistsFile)
 	epicker.Print(err)
-	// Todo:
+	// Todo: something
 	// Output:
-	// open /usr/local/var/go/src/goutils/epicker/non_exists.file: no such file or directory
+	// open /usr/local/var/go/src/github.com/goindow/epicker/non_exists.file: no such file or directory
 }
