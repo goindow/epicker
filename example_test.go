@@ -1,17 +1,17 @@
 package epicker_test
 
 import (
-	"os"
 	"github.com/goindow/epicker"
+	"os"
 )
 
 var (
-	pwd, _ = os.Getwd()
+	pwd, _        = os.Getwd()
 	nonExistsFile = pwd + "/non_exists.file"
 )
 
 func setLogger() {
-	epicker.SetLogger(os.Stderr, "", 0)	
+	epicker.SetLogger(os.Stderr, "", 0)
 }
 
 func ExamplePrint() {

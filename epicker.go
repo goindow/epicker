@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	FLAG = log.Ltime|log.Lshortfile    // 默认的日志输出标记，时间及文件名
+	FLAG = log.Ltime | log.Lshortfile // 默认的日志输出标记，时间及文件名
 )
 
 // Picker 是对 log.Logger 的一层包装
@@ -36,7 +36,7 @@ func pick(e error) (error, bool) {
 }
 
 func dump(s string) {
-	picker.logger.Output(3, s)    // 调用栈追溯要设置成 3，显示调用 picker 的行号，而不是显示 picker 中函数的行号(默认 2，因为我们又包装了一层，故需要再向上一层)，log.Logger.Output 会自动追加换行
+	picker.logger.Output(3, s) // 调用栈追溯要设置成 3，显示调用 picker 的行号，而不是显示 picker 中函数的行号(默认 2，因为我们又包装了一层，故需要再向上一层)，log.Logger.Output 会自动追加换行
 }
 
 // SetLogger 设置 picker.logger，

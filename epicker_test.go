@@ -1,12 +1,12 @@
 package epicker
 
 import (
-	"testing"
 	"bytes"
 	"errors"
 	"fmt"
 	"os"
 	"os/exec"
+	"testing"
 )
 
 const (
@@ -21,7 +21,7 @@ const (
 )
 
 var (
-	buf bytes.Buffer
+	buf       bytes.Buffer
 	err       = errors.New(ERR)
 	customErr = fmt.Sprintf(CUSTOM_ERR_FORMAT, CUSTOM_ERR) + " (" + ERR + ")"
 )
