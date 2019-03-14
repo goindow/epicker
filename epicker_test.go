@@ -1,12 +1,12 @@
 package epicker
 
 import (
+	"testing"
 	"bytes"
 	"errors"
 	"fmt"
 	"os"
 	"os/exec"
-	"testing"
 )
 
 const (

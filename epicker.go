@@ -1,4 +1,4 @@
-// Package epicker 实现了一个简单的 error 处理器
+// Package epicker 封装了一个简单的 error 处理器
 package epicker
 
 import (
