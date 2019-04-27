@@ -27,7 +27,7 @@ godoc -http=:6060
 ### 使用
 ```go
 import (
-	"github.com/goindow/epicker"
+    "github.com/goindow/epicker"
 )
 ```
 
@@ -100,7 +100,7 @@ epicker.Panicf(e, "format %s", "custom error info")
 ```go
 var buf bytes.buffer
 
-epicker.SetLogger(&buf, "prefix", 0)	// 将错误信息输出到 buf 中（而不是默认的 os.Stderr，一般是显示设备，如显示器）
+epicker.SetLogger(&buf, "prefix", 0)    // 将错误信息输出到 buf 中（而不是默认的 os.Stderr，一般是显示设备，如显示器）
 ```
 
 ## 一个完整的例子
@@ -108,29 +108,29 @@ epicker.SetLogger(&buf, "prefix", 0)	// 将错误信息输出到 buf 中（而�
 package epicker_test
 
 import (
-	"github.com/goindow/epicker"
-	"os"
+    "github.com/goindow/epicker"
+    "os"
 )
 
 var (
-	pwd, _        = os.Getwd()
-	nonExistsFile = pwd + "/non_exists.file"
+    pwd, _        = os.Getwd()
+    nonExistsFile = pwd + "/non_exists.file"
 )
 
 func ExamplePrint() {
-	epicker.SetLogger(os.Stdout, "", 0)
-	_, err := os.Open(nonExistsFile)
-	epicker.Print(err)
-	// Output:
-	// open /usr/local/var/go/src/github.com/goindow/epicker/non_exists.file: no such file or directory
+    epicker.SetLogger(os.Stdout, "", 0)
+    _, err := os.Open(nonExistsFile)
+    epicker.Print(err)
+    // Output:
+    // open /usr/local/var/go/src/github.com/goindow/epicker/non_exists.file: no such file or directory
 }
 
 func ExamplePrintf() {
-	epicker.SetLogger(os.Stdout, "", 0)
-	_, err := os.Open(nonExistsFile)
-	epicker.Printf(err, "format %s", "custom erorr info")
-	// Output:
-	// format custom erorr info (open /usr/local/var/go/src/github.com/goindow/epicker/non_exists.file: no such file or directory)
+    epicker.SetLogger(os.Stdout, "", 0)
+    _, err := os.Open(nonExistsFile)
+    epicker.Printf(err, "format %s", "custom erorr info")
+    // Output:
+    // format custom erorr info (open /usr/local/var/go/src/github.com/goindow/epicker/non_exists.file: no such file or directory)
 }
 ```
 
