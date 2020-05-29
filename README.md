@@ -1,5 +1,5 @@
 # epicker
-Package epicker 封装了一个简单的 error 处理器
+Package epicker 封装了一个 error 处理器
 
 ## 特性
 - 当 error 为 nil，不做任何处理；为 error，相应函数处理错误
